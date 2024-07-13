@@ -12,9 +12,20 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
+            /*if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
+                window.close();
+            }*/
+
+            if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left) {
                 window.close();
             }
+        }
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+            window.close();
+        }
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            window.close();
         }
 
     }
